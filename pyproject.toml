@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patchpilot"
+version = "0.1.0"
+description = "Local AI code reviewer powered by AWS Bedrock. No SaaS, no code leaves your machine."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "Arav22"}]
+keywords = ["code-review", "ai", "bedrock", "claude", "git", "pr"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "boto3>=1.35.0",
+    "click>=8.1.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+patchpilot = "patchpilot.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Arav22/patchpilot"
+Issues = "https://github.com/Arav22/patchpilot/issues"
